@@ -9,13 +9,15 @@ Vendor[] vendors = [
     new Vendor { TaxId = "123456789", BusinessName = "Bender's Orphanage", IsCompliance = false },
 ];
 
-VendorDuplicateFinder.ShowDuplicateVendors(vendors);
+DuplicateFinder.ShowDuplicateItems(vendors, "Vendors");
 
 Customer[] customers = [
     new Customer { SocialSecurityNumber = "111223333", FirstName = "Jacob", LastName = "Daniels", IsHomeless = true },
     new Customer { SocialSecurityNumber = "432423423", FirstName = "Anakin", LastName = "Skywalker", IsHomeless = false },
     new Customer { SocialSecurityNumber = "111223333", FirstName = "Padme", LastName = "Amidala", IsHomeless = false }
 ];
+
+DuplicateFinder.ShowDuplicateItems(customers, "Customers");
 
 RadioStation[] radioStations = [
     new RadioStation { Frequency = 100.2f, Name = "Sunny", State = "Texas" },
