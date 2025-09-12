@@ -8,7 +8,7 @@ namespace InterfaceBenefits.Models
 {
     public interface IDuplicatableItem
     {
-        string GetUniqueId();
+        object GetUniqueId();
         string GetDisplaybaleNonUniqueData();
     }
 }
