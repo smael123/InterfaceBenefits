@@ -33,3 +33,12 @@ FacebookAccount[] facebookAccounts = [
     new FacebookAccount { EmailAddress = "somebody2@example.com", DisplayName = "Jane Smith" },
     new FacebookAccount { EmailAddress = "someone@example.com", DisplayName = "John Moore" },
 ];
+
+List<IDuplicatableItem> duplicatableFacebookAccounts = [];
+
+foreach (FacebookAccount facebookAccount in facebookAccounts)
+{
+    duplicatableFacebookAccounts.Add(new FacebookAccountDuplicatableAdapter(facebookAccount));
+}
+
+DuplicateFinder.ShowDuplicateItems(duplicatableFacebookAccounts, "Facebook Accounts");
