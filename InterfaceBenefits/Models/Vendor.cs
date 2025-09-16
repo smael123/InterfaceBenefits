@@ -14,7 +14,7 @@ public class Vendor : IDuplicatableItem
         return BusinessName;
     }
 
-    public string GetUniqueId()
+    public object GetUniqueId()
     {
         return TaxId;
     }

@@ -16,7 +16,7 @@ public class Customer : IDuplicatableItem
         return $"{FirstName} {LastName}";
     }
 
-    public string GetUniqueId()
+    public object GetUniqueId()
     {
         return SocialSecurityNumber;
     }

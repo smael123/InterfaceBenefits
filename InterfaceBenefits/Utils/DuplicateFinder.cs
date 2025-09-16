@@ -10,8 +10,8 @@ public static class DuplicateFinder
     /// <param name="duplicatableItems"></param>
     public static void ShowDuplicateItems(IEnumerable<IDuplicatableItem> duplicatableItems, string pluralItemName)
     {
-        Dictionary<string, List<string>> duplicateDictionary = [];
-        HashSet<string> idsWithDuplicatedData = [];
+        Dictionary<object, List<string>> duplicateDictionary = [];
+        HashSet<object> idsWithDuplicatedData = [];
 
         foreach (IDuplicatableItem item in duplicatableItems)
         {
@@ -29,7 +29,7 @@ public static class DuplicateFinder
         Console.WriteLine($"Differing {pluralItemName}");
         Console.WriteLine();
         
-        foreach (string key in idsWithDuplicatedData)
+        foreach (object key in idsWithDuplicatedData)
         {
             List<string> duplicateArray = duplicateDictionary[key];
             

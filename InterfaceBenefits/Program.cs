@@ -26,6 +26,8 @@ RadioStation[] radioStations = [
     new RadioStation { Frequency = 100.2f, Name = "Beyonce 24/7", State = "Texas" },
 ];
 
+DuplicateFinder.ShowDuplicateItems(radioStations, "Radio Stations");
+
 FacebookAccount[] facebookAccounts = [
     new FacebookAccount { EmailAddress = "someone@example.com", DisplayName = "Jack Daniels" },
     new FacebookAccount { EmailAddress = "somebody2@example.com", DisplayName = "Jane Smith" },
